@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/ndphu/message-handler-lib/broker"
 	"github.com/ndphu/message-handler-lib/config"
 	"github.com/ndphu/message-handler-lib/handler"
 	"github.com/ndphu/message-handler-lib/model"
+	"github.com/ndphu/skype-cmd-exec/bot"
 	"io/ioutil"
 	"log"
 	"os"
@@ -26,6 +26,7 @@ type Config struct {
 }
 
 var conf Config
+var b = bot.Bot{BotId: os.Getenv("WORKER_ID")}
 
 func main() {
 
@@ -83,28 +84,10 @@ func removeBlankSpaces(input string) (string) {
 
 func processCommand(e model.MessageEvent) error {
 	threadId := e.GetThreadId()
-	reply(threadId, "Processing command...")
+	_ = b.SendText(threadId, "Processing command...")
 	command, result := execCmd(e.GetContent())
-	return reply(threadId,
+	return b.SendText(threadId,
 		"Command: "+command+"\n"+"Result:\n"+result)
-}
-
-func reply(threadId, result string) error {
-	workerId := os.Getenv("WORKER_ID")
-	rpc, err := broker.NewRpcClient(workerId)
-	if err != nil {
-		log.Printf("React: Fail to create RPC client by error %v\n", err)
-		return err
-	}
-	request := &broker.RpcRequest{
-		Method: "sendText",
-		Args:   []string{threadId, wrapAsPreformatted(result)},
-	}
-	if err := rpc.Send(request); err != nil {
-		log.Println("React: Fail to reply:", err.Error())
-		return err
-	}
-	return nil
 }
 
 func execCmd(command string) (string, string) {
@@ -132,6 +115,7 @@ func isManager(from string) bool {
 	}
 	return false
 }
+
 func wrapAsPreformatted(message string) string {
 	return fmt.Sprintf("<pre raw_pre=\"{code}\" raw_post=\"{code}\">%s</pre>", message)
 }

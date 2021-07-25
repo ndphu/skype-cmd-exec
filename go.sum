@@ -1,6 +1,14 @@
 github.com/google/uuid v1.2.0 h1:qJYtXnJRWmpe7m/3XlyhrsLrEURqHRM2kxzoxXqyUDs=
 github.com/google/uuid v1.2.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/ndphu/message-handler-lib v0.0.0-20210710151401-a532317d99bc h1:t2w4fGVEoiZ9AShtKh9zP/K+VoF/oertG2v9oV8y5P4=
 github.com/ndphu/message-handler-lib v0.0.0-20210710151401-a532317d99bc/go.mod h1:YJiD3UGw8fZzoy1qC8uEZEBQeMj7NHxCJjJoHiDR6bI=
+github.com/ndphu/message-handler-lib v0.0.0-20210710161015-104b1d4044d5 h1:dw9pJmd+faBX3SrFnVzEJZnQRPRO0iMmLssONtQeIk0=
+github.com/ndphu/message-handler-lib v0.0.0-20210710161015-104b1d4044d5/go.mod h1:YJiD3UGw8fZzoy1qC8uEZEBQeMj7NHxCJjJoHiDR6bI=
+github.com/ndphu/message-handler-lib v0.0.0-20210710162821-c34bbac404a4 h1:wwm9jaSwJzUyGJC/N/oxyonIBulnSSo4Fp3IOSwofes=
+github.com/ndphu/message-handler-lib v0.0.0-20210710162821-c34bbac404a4/go.mod h1:YJiD3UGw8fZzoy1qC8uEZEBQeMj7NHxCJjJoHiDR6bI=
+github.com/ndphu/message-handler-lib v0.0.0-20210725082544-9d361221c226 h1:dlxkBiG+96b8KpteHT7lQcYIER6gSjKWI9AML89zfVE=
+github.com/ndphu/message-handler-lib v0.0.0-20210725082544-9d361221c226/go.mod h1:YJiD3UGw8fZzoy1qC8uEZEBQeMj7NHxCJjJoHiDR6bI=
 github.com/streadway/amqp v1.0.0 h1:kuuDrUJFZL1QYL9hUNuCxNObNzB0bV/ZG5jV3RWAQgo=
 github.com/streadway/amqp v1.0.0/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=
